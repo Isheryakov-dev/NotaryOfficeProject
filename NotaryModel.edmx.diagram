@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bc82c4c948274c3e88b1cc29a2e6db7b" Name="Diagram1">
+        <EntityTypeShape EntityType="NotaryDBModel.Client" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NotaryDBModel.Deal" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="NotaryDBModel.Employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="NotaryDBModel.Position" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NotaryDBModel.Service" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="NotaryDBModel.FK_Deal_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="NotaryDBModel.FK_Deal_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="NotaryDBModel.FK_Deal_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="NotaryDBModel.FK_Employee_Position" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

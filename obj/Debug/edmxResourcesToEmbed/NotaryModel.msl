@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище NotaryDBModelContainer" CdmEntityContainer="NotaryDBEntities">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="NotaryDBModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="NumPass" ColumnName="NumPass" />
+          <ScalarProperty Name="SerPass" ColumnName="SerPass" />
+          <ScalarProperty Name="BirthdayDate" ColumnName="BirthdayDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deals">
+      <EntityTypeMapping TypeName="NotaryDBModel.Deal">
+        <MappingFragment StoreEntitySet="Deal">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="DealDate" ColumnName="DealDate" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="NotaryDBModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="SerialPass" ColumnName="SerialPass" />
+          <ScalarProperty Name="NumPass" ColumnName="NumPass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="NotaryDBModel.Position">
+        <MappingFragment StoreEntitySet="Position">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="NotaryDBModel.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServicePrice" ColumnName="ServicePrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

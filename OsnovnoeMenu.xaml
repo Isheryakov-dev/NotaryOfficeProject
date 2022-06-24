@@ -1,0 +1,28 @@
+﻿<Window x:Name="glWindow" x:Class="NotarialOffice.OsnovnoeMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotarialOffice"
+        mc:Ignorable="d"
+        Title="Нотариальная контора &quot;Нотариус&quot; - Основное меню" Height="400" Width="550" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Border MinWidth="400" Background="White" VerticalAlignment="Stretch" Padding="30" MaxWidth="550">
+        
+        <StackPanel Margin="0,0,0,0">
+            <Border Background="Red"/>
+            <Grid>
+                <Button x:Name="backBtn" Margin="0,0,0,10" HorizontalAlignment="Right" VerticalAlignment="Center"  Foreground="White" FontFamily="/InsuranceCompanyMAX;component/Fonts/#Source Sans Pro" Height="35" Click="backBtn_Click" FontWeight="Bold" Cursor="Hand" Style="{StaticResource LigtCoursor}" Width="35" FontSize="14" Background="#FFF00202">
+                    <materialDesign:PackIcon Kind="ExitToApp" Width="30" Height="30"/>
+                </Button>
+                <Image Source="gMFvQJwCVZE.jpg"  HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="120" />
+                <TextBlock Text="Добро пожаловать!" HorizontalAlignment="Center" FontWeight="Bold" FontSize="22" FontFamily="/InsuranceCompanyMAX;component/Fonts/#Source Sans Pro" Margin="0 0 0 10" VerticalAlignment="Bottom" Foreground="#FFF00202"/>
+
+            </Grid>
+            <Button x:Name="clientsInfoBtn" Content="Клиенты" Margin="0 20 0 0" BorderBrush="#FF008BFF" Foreground="White" FontFamily="/InsuranceCompanyMAX;component/Fonts/#Source Sans Pro" Click="clientsInfoBtn_Click" Cursor="Hand" Height="50" Style="{StaticResource LigtCoursor}" FontSize="18" Width="180" Background="#FFF00202"/>
+            <Button x:Name="AgBtn" Content="Сотрудники" Margin="0 20 0 0" BorderBrush="#FF008BFF" Foreground="White" FontFamily="/InsuranceCompanyMAX;component/Fonts/#Source Sans Pro" Click="AgBtn_Click" Height="50" Style="{StaticResource LigtCoursor}" FontSize="18" Cursor="Hand" Width="180" Background="#FFF00202"/>
+            <Button x:Name="contractsBN" Content="Заказы" Margin="0 20 0 0"  BorderBrush="#FF008BFF" Foreground="White" FontFamily="/InsuranceCompanyMAX;component/Fonts/#Source Sans Pro" Click="contractsBN_Click" Height="50" Style="{StaticResource LigtCoursor}" FontSize="18" Cursor="Hand" Width="180" Background="#FFF00202"/>
+
+        </StackPanel>
+    </Border>
+</Window>

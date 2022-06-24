@@ -1,0 +1,67 @@
+﻿<Window x:Name="dobavitCourseWindow" x:Class="NotarialOffice.SozdanieZakaza"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotarialOffice"
+        mc:Ignorable="d"
+        Title="Нотариальная контора &quot;Нотариус&quot; - Создание записи заказа"  Height="530" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Border Height="510" Background="White" MaxWidth="450" Padding="30" Width="500">
+        <StackPanel  Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <TextBlock TextWrapping="Wrap" Text="Введите данные!" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Proxima Nova Rg" FontSize="24" Margin="0,0,0,0" Foreground="#FFF00202"/>
+
+            </StackPanel>
+            <DatePicker x:Name="dateCoursePicker" HorizontalContentAlignment="Center" SelectedDate="{Binding DealDate}"  materialDesign:HintAssist.Hint="Дата"  FontFamily="Proxima Nova Rg" FontSize="17" Margin="0,20,0,0" HorizontalAlignment="Center" Width="150" Height="43"/>
+            <ComboBox x:Name="serviceCombo" SelectedItem="{Binding Service}" DisplayMemberPath="ServiceName" materialDesign:HintAssist.Hint="Услуга" Style="{StaticResource MaterialDesignFloatingHintComboBox}"   FontFamily="Proxima Nova Rg" HorizontalAlignment="Stretch" FontSize="17" Cursor="Arrow" Margin="0,20,0,20" SelectionChanged="serviceCombo_SelectionChanged" />
+
+            <ComboBox x:Name="clientCombo" SelectedItem="{Binding Client}" DisplayMemberPath="FIO" materialDesign:HintAssist.Hint="Клиент" Style="{StaticResource MaterialDesignFloatingHintComboBox}"   FontFamily="Proxima Nova Rg" HorizontalAlignment="Stretch" FontSize="17" Cursor="Arrow" Margin="0,0,0,0"/>
+
+            <ComboBox x:Name="employeeCombo" SelectedItem="{Binding Employee}" DisplayMemberPath="FIO" materialDesign:HintAssist.Hint="Сотрудник" Style="{StaticResource MaterialDesignFloatingHintComboBox}"   FontFamily="Proxima Nova Rg" HorizontalAlignment="Stretch" FontSize="17" Cursor="Arrow" Margin="0,20,0,0" />
+
+
+            <TextBox x:Name="sumBox" materialDesign:HintAssist.Hint="Сумма" Style="{StaticResource MaterialDesignFloatingHintTextBox}"   FontFamily="Proxima Nova Rg" HorizontalAlignment="Stretch" FontSize="17" Cursor="Arrow" Margin="0,20,0,0" IsReadOnly="True" PreviewTextInput="sumBox_PreviewTextInput" IsEnabled="False"  />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,55,0,0">
+                <Button x:Name="saveBtn" 
+                Content="Сохранить"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="118"
+                Height="42"
+                Background="#FFF00202"
+                Foreground="White"
+                BorderBrush="{x:Null}"
+                Click="saveBtn_Click"
+                    Grid.Row="1" Cursor="Hand" FontFamily="/InsuranceCompanyMAX;component/Fonts/#Source Sans Pro" Margin="0,0,20,0" FontSize="15">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button x:Name="cancelBtn" 
+                Content="Отмена"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="118"
+                Height="42"
+                Background="#FFF00202"
+                Foreground="White"
+                BorderBrush="{x:Null}"
+                Click="cancelBtn_Click"
+                    Grid.Row="1" Cursor="Hand" FontFamily="/InsuranceCompanyMAX;component/Fonts/#Source Sans Pro" FontSize="15">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
+
+    </Border>
+</Window>
